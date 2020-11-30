@@ -1,0 +1,15 @@
+body {
+
+    --primary: #06beb6;
+    --secondary:#48b1bf;
+    --terciary: #01212e;
+    --txt: white;
+  
+    &.dark {
+      --primary: #00504c;
+      --secondary:#00444d;
+      --terciary: #c1e2ee;
+      --txt: rgb(255, 254, 254);
+    }
+    
+}
