@@ -4,4 +4,4 @@
  * See: https://www.gatsbyjs.com/docs/browser-apis/
  */
 
-// This file is needed for loading sass files
+import "./src/global.scss"
