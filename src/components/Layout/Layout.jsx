@@ -5,27 +5,19 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import React from "react"
+import React, { useState } from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 
 import NavBar from '../NavBar'
 import { ThemeBtn } from '../Buttons'
 import './Layout.scss'
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+
+  const [darkMode, setDarkMode] = useState(false);
 
   return (
-    <div id='layout'>
+    <div className={darkMode ? 'dark' : null}>
         <NavBar />
         <main>{children}</main>
         <footer style={{
@@ -35,8 +27,12 @@ const Layout = ({ children }) => {
           {` `}
           <a href="https://www.gatsbyjs.com">Gatsby</a>
         </footer>
+
         <div className="theme-btn-area">
-          <ThemeBtn/>
+          <ThemeBtn 
+            darkMode={darkMode} 
+            setDarkMode={setDarkMode}
+          />
         </div>
     </div>
   )

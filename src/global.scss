@@ -30,10 +30,6 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
-
-  &.dark {
-    background-color: var(--darkBg);
-  }
 }
 
 h1, h2, h3, p, span {

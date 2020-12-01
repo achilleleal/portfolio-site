@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import { FiSun } from 'react-icons/fi';
 import { FaMoon } from 'react-icons/fa';
@@ -17,21 +17,12 @@ export default function Button({ children, onClick, type, className }) {
     )
 }
 
-export const ThemeBtn = ({size}) => {
-
-    const body = document.querySelector('body');
-
-    const [darkMode, setDarkMode] = useState(Boolean(body.className)); // false = light | true = dark
-
-    const toggleTheme = () => {
-        setDarkMode(prev => !prev);
-        body.classList.toggle('dark');
-    }
+export const ThemeBtn = ({size, darkMode, setDarkMode}) => {
 
     return (
         <Button
           size={size}
-          onClick={toggleTheme}
+          onClick={() => setDarkMode(prev => !prev)}
           className="themeBtn"
         >
             {darkMode ? <FiSun /> : <FaMoon />}

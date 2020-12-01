@@ -20,7 +20,7 @@ module.exports = {
           `Raleway`,
           'Lato', // you can also specify font weights and styles
         ],
-        display: 'swap'
+        display: 'block'
       }
     },
     {

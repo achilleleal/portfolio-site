@@ -1,6 +1,12 @@
-#layout {
+div.dark {
+  background-color: var(--darkBg);
+}
+
+main {
     margin: 0 auto;
-    max-width: 1400px;
+    max-width: var(--max-width);
+    min-height: 90vh;
+    color: var(--txt);
 }
 
 .theme-btn-area {

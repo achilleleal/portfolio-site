@@ -1,23 +1,24 @@
 :root {
 
+  --max-width: 1400px;
+
   //---- Themes ----
 
   // Should be used when the color needs to remain static regardless of the page theme.
 
     // Light theme (default)
-    --primary-light: #02b0a7;
-    --secondary-light:#45a2ae;
-    --terciary-light: #01212e;
-    --changing-txt-light: hsla(0, 0%, 0%, 0.8);
-    --txt-light: rgb(255, 255, 255);
+    --primary-light: #01212e;
+    --secondary-light:#02b0a7;
+    --terciary-light:#45a2ae;
+    --txt-light: hsla(0, 0%, 0%, 0.8);
+    --lightBg: white;
 
     // Dark theme
-    --primary-dark: #00504c;
-    --secondary-dark:#00444d;
-    --terciary-dark: #02b0a7;
-    --changing-txt-dark: #b7fffe;
+    --primary-dark:#00ebdf;
+    --secondary-dark:#00504c;
+    --terciary-dark: #00444d;
     --txt-dark: white;
-    --darkBg: #2a3435;
+    --darkBg: #1e2222;
 
   //-------------------------
 
@@ -26,14 +27,14 @@
     --primary: var(--primary-light);
     --secondary:var(--secondary-light);
     --terciary: var(--terciary-light);
-    --changing-txt: var(--changing-txt-light);
     --txt: var(--txt-light);
+    --bg: var(--lightBg);
     
     .dark {
       --primary: var(--primary-dark);
-      --secondary:var(--secondary-dark);
+      --secondary:var(--seconadary-dark);
       --terciary: var(--terciary-dark);
-      --changing-txt: var(--changing-txt-dark);
       --txt: var(--txt-dark);
+      --bg: var(--darkBg);
     }
 }
