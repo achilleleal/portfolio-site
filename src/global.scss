@@ -4,13 +4,26 @@ html {
   font: 112.5%/1.45em georgia, serif, sans-serif;
 }
 
+//---- Page fonts ----
+
+// Titles
+h1, h2, h3, h4 {
+  font-family: 'Raleway', 'Lato', 'Roboto', Calibri, georgia, serif;
+  font-weight: bold;
+}
+
+// Content
+p, span, button {
+  font-family: 'Lato', 'Roboto', Calibri, georgia, serif;
+}
+
+//--------------------
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--changing-txt);
-  font-family: georgia, serif;
-  font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
   -moz-font-feature-settings: "kern", "liga", "clig", "calt";
@@ -21,12 +34,6 @@ body {
   &.dark {
     background-color: var(--darkBg);
   }
-}
-
-main {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1000px;
 }
 
 h1, h2, h3, p, span {

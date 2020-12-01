@@ -1,5 +1,5 @@
 .btn {
-    background-color: var(--primary);
+    background-color: var(--terciary);
     border: none;
     color: var(--txt);
     font-size: 1em;
@@ -10,4 +10,5 @@
 .themeBtn {
     border: 5px solid var(--secondary);
     border-radius: 5rem;
+    padding: 1rem;
 }

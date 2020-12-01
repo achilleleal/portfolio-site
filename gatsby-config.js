@@ -13,6 +13,17 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Roboto`,
+          `Raleway`,
+          'Lato', // you can also specify font weights and styles
+        ],
+        display: 'swap'
+      }
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
