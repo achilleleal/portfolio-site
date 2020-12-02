@@ -17,7 +17,7 @@ module.exports = {
       options: {
         fonts: [
           `Roboto`,
-          `Raleway`,
+          `Raleway\:400,700`,
           'Lato', // you can also specify font weights and styles
         ],
         display: 'block'

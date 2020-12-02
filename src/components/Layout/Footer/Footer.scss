@@ -1,0 +1,32 @@
+footer {
+
+    padding: 1.5rem;
+    background-color: var(--primary-light);
+    color: white;
+
+    .dark & {
+        background-color: var(--secondary);
+    }
+
+    .footer-container {
+        margin: 0 auto;
+        max-width: var(--max-width);
+        text-align: center;
+
+        svg { 
+            color: white; 
+            width: 50px;
+            height: auto;
+            margin: .5rem 10px;
+
+            &:hover {
+                transition: 200ms;
+                transform: scale(1.1);
+            }
+        }
+
+        h4 {
+            margin: .5rem;
+        }
+    }
+}

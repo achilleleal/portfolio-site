@@ -1,28 +1,15 @@
 header {
     position: sticky;
-    background-color: var(--lightBg);
     opacity: 0.975;
-
-    .dark & {
-        background-color: var(--terciary);
-    }
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 0;
+    padding: 1.25rem 2rem .5rem 2rem;
     margin: 0 auto 1rem auto;
     max-width: var(--max-width);
-
-    &:first-child {
-        color: var(--primary-dark);
-    }
-
-    .dark &:first-child {
-        color: white;
-    }
 
     a {
         text-decoration: none;

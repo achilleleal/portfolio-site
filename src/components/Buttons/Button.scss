@@ -20,6 +20,7 @@
 .themeBtn {
     $size: 75px;
     border-radius: 5rem;
+    border: solid 5px var(--secondary);
     padding: 1rem;
     width: $size;
     height: $size;

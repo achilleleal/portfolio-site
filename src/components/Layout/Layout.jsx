@@ -8,8 +8,9 @@
 import React, { useState } from "react"
 import PropTypes from "prop-types"
 
-import NavBar from '../NavBar'
+import NavBar from './NavBar'
 import { ThemeBtn } from '../Buttons'
+import Footer from './Footer'
 import './Layout.scss'
 
 const Layout = ({ children }) => {
@@ -19,14 +20,10 @@ const Layout = ({ children }) => {
   return (
     <div className={darkMode ? 'dark' : null}>
         <NavBar />
-        <main>{children}</main>
-        <footer style={{
-          marginTop: `2rem`
-        }}>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
+        <main>
+          {children}
+        </main>
+        <Footer />
 
         <div className="theme-btn-area">
           <ThemeBtn 
