@@ -1,5 +1,9 @@
-div.dark {
-  background-color: var(--darkBg);
+.page {
+  height: 100%;
+  padding-top: 5%;
+  &.dark {
+    background-color: var(--darkBg);
+  }
 }
 
 main {

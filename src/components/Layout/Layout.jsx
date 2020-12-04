@@ -18,7 +18,7 @@ const Layout = ({ children }) => {
   const [darkMode, setDarkMode] = useState(false);
 
   return (
-    <div className={darkMode ? 'dark' : null}>
+    <div className={`page ${darkMode ? 'dark' : null}`}>
         <NavBar />
         <main>
           {children}
