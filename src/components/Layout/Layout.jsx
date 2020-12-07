@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import React, { useState } from "react"
+import React from "react"
 import PropTypes from "prop-types"
 
 import NavBar from './NavBar'
@@ -15,10 +15,8 @@ import './Layout.scss'
 
 const Layout = ({ children }) => {
 
-  const [darkMode, setDarkMode] = useState(false);
-
-  return (
-    <div className={`page ${darkMode ? 'dark' : null}`}>
+return (
+    <div className="page">
         <NavBar />
         <main>
           {children}
@@ -26,11 +24,8 @@ const Layout = ({ children }) => {
         <Footer />
 
         <div className="theme-btn-area">
-          <ThemeBtn 
-            darkMode={darkMode} 
-            setDarkMode={setDarkMode}
-          />
-        </div>
+          <ThemeBtn />
+        </div> 
     </div>
   )
 }

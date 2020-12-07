@@ -13,8 +13,12 @@ h1, h2, h3, h4 {
 }
 
 // Content
-p, span, button {
+p, button {
   font-family: 'Lato', 'Roboto', Calibri, georgia, serif;
+}
+
+span {
+  font-family: inherit;
 }
 
 //--------------------
@@ -30,6 +34,10 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
+
+  &.dark {
+    background-color: var(--bg);
+  }
 }
 
 h1, h2, h3, h4, p, span {

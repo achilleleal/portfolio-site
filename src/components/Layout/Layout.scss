@@ -1,14 +1,11 @@
 .page {
+  transition: 250ms;
   height: 100%;
-  padding-top: 5%;
-  &.dark {
-    background-color: var(--darkBg);
-  }
+  padding-top: 5rem;
 }
 
 main {
     margin: 0 auto;
-    max-width: var(--max-width);
     min-height: 90vh;
     color: var(--txt);
 }
