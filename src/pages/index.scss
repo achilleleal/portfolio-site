@@ -21,7 +21,7 @@
     z-index: 9;
 
     margin: 0 auto;
-    min-height: 80vh; 
+    min-height: 100vh; 
     max-width: var(--max-width);
     
 
@@ -63,7 +63,7 @@
 }
 
 .intro-bg {
-    min-height: 80vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end; 

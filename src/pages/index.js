@@ -19,7 +19,10 @@ const IntroArea = () => {
   const particleParams = {
     particles: {
       number: {
-        value: 100
+        value: 250
+      },
+      color: {
+        value: ['#1e2222', '#ffffff', '#00ebdf', '#00444d']
       },
       size: {
         value: 5
