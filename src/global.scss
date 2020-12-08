@@ -6,15 +6,15 @@ html {
 
 //---- Page fonts ----
 
+// Content
+* {
+  font-family: 'Lato', 'Roboto', Calibri, georgia, serif;
+}
+
 // Titles
 h1, h2, h3, h4 {
   font-family: 'Raleway', 'Lato', 'Roboto', Calibri, georgia, serif;
   font-weight: bold;
-}
-
-// Content
-p, button {
-  font-family: 'Lato', 'Roboto', Calibri, georgia, serif;
 }
 
 span {

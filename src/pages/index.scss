@@ -1,0 +1,117 @@
+
+.intro-area svg {
+    width: 100vw;
+    fill: var(--primary);
+
+    .dark & {
+        fill: var(--secondary);
+    }
+}
+
+.intro {
+    $width-query: 800px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    position: relative;
+    z-index: 9;
+
+    margin: 0 auto;
+    min-height: 80vh; 
+    max-width: var(--max-width);
+    
+
+    @media (max-width: $width-query) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 25vh;
+    }
+
+    .traits {
+        margin: 2rem;
+
+        ul {
+            padding-left: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+    }
+    
+    span {
+        color: var(--primary-dark);
+
+        .dark & {
+            text-shadow: 0px 0px 30px var(--primary);
+        }
+    }
+
+    h1 {
+        $size: 3.5rem;
+        font-size: $size;
+        line-height: $size;
+        padding-left: 1rem;
+
+        @media (max-width: $width-query) {
+            text-align: center;
+        }
+    }
+}
+
+.intro-bg {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+}
+
+.rocket-container {
+    display: flex;
+    justify-content: center;
+
+    svg {
+        $rotation: 90deg;
+        position: relative;
+        z-index: 8;
+
+        width: 70%;
+        height: auto;
+        transform: rotate($rotation);
+        animation: rocket 8s infinite alternate;
+
+        @keyframes rocket {
+            $X: 10px;
+            $Y: 5%;
+
+            0% {
+                transform: rotate($rotation) translate(-10px, 5%);
+            }
+            30% {
+                transform: rotate($rotation) translate(10px, -5%);
+            }
+
+            60% {
+                transform: rotate($rotation) translate(5%, -10px);
+            }
+
+            90% {
+                transform: rotate($rotation) translate(-5%, 10px);
+            }
+
+            100% {
+                transform: rotate($rotation);
+            }
+        }
+    }
+}
+
+.bg-particles {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+}
