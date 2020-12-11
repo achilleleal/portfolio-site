@@ -24,8 +24,8 @@ export default function NavBar() {
     <header className={scrolled ? 'scrolled' : ''}>
         <nav className="navbar">
             <NavLink to="/"><span>~/</span> SEBASTIÁN_LEAL</NavLink>
-            <NavLink to="/page-2"><span>./</span>about</NavLink>
-            <NavLink to="/works"><span>./</span>works</NavLink>
+            <NavLink to="#about"><span>./</span>about</NavLink>
+            <NavLink to="#works"><span>./</span>works</NavLink>
             <NavLink to="/contact"><span>./</span>contact</NavLink>
         </nav>
     </header>

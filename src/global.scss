@@ -19,11 +19,21 @@ h1, h2, h3, h4 {
 
 span {
   font-family: inherit;
+  color: var(--primary-dark);
+
+  .dark & {
+      text-shadow: 0px 0px 30px var(--primary);
+  }
+}
+
+span[role="img"] {
+  text-shadow: none !important;
 }
 
 //--------------------
 
 body {
+  transition: 250ms;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

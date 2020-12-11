@@ -2,15 +2,20 @@ import React from "react"
 
 import Particles from 'react-particles-js'
 
+import { techSkills, softSkills } from '../components/skills'
+
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import Rocket from '../images/svg/rocket.svg'
+import Card from '../components/Card'
+import Emoji from '../components/Emoji'
 import './index.scss'
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <IntroArea />
+    <AboutMe />
   </Layout>
 )
 
@@ -35,7 +40,7 @@ const IntroArea = () => {
         direction: 'left',
         out_mode: 'out',
         straight: true,
-        speed: 5
+        speed: 5,
       }
     }
   }
@@ -45,7 +50,7 @@ const IntroArea = () => {
       <Particles params={particleParams} className="bg-particles"/>
       <div className="intro">
         <div>
-          <h1>The web developer <span>you need.</span></h1>
+          <h1>The web developer <span>you need.</span> <Emoji icon='⭐️'/></h1>
           <div className="traits">
             <h2>Looking for someone...</h2>
             <ul>
@@ -65,5 +70,29 @@ const IntroArea = () => {
   )
 }
 
+
+
+const AboutMe = () => {
+  return (
+    <main id="about">
+      <h1><Emoji icon='⚡️'/> Hello! My name is <span>Sebastián Leal</span><Emoji icon='⚡️'/></h1>
+      <article className="about-me">
+        <p>
+          I'm a web developer from Venezuela. <br></br>
+          I focus <span>primarily on the frontend</span>, but I also know <span>some backend</span> things.<br></br> 
+          I graduated from highschool a few months ago, and I plan on studying computer science.<br></br>
+          I've been developing for a while now, and love building interesting projects.<br></br>
+          Also, I'm a <span>huge space geek</span> (is it too obvious?).<br></br>
+        </p>
+        <h2>I'm always looking for a good challenge to drive my skills to their limits</h2>
+      </article>
+      <div className="skills">
+        <Card title='Soft skills' content={softSkills} display='list'/>
+        <Card title='Tech skills' content={techSkills} display='grid'/>
+      </div>
+    </main>
+    
+  )
+}
 
 export default IndexPage
