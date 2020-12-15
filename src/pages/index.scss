@@ -8,6 +8,17 @@
     }
 }
 
+#info {
+    // padding-top: 2rem;
+    background-image:  radial-gradient(gray 2px, transparent 2px), radial-gradient(var(--secondary) 2px, transparent 2px);
+    background-size: 80px 80px;
+    background-position: 0 0,40px 40px;
+
+    .dark & {
+        background-image:  radial-gradient(var(--primary) 2px, transparent 2px), radial-gradient(var(--terciary) 2px, transparent 2px);
+    }
+}
+
 .intro {
     $width-query: 800px;
 
@@ -28,6 +39,8 @@
     @media (max-width: $width-query) {
         grid-template-columns: 1fr;
         grid-template-rows: 25vh;
+
+        padding: 250px 1rem 0;
     }
 
     .traits {
@@ -110,6 +123,17 @@
 #about {
     margin-top: 10rem;
     text-align: center;
+    padding: 1.5rem;
+
+    .title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    h1 {
+        line-height: 3rem;
+    }
 }
 
 .about-me {
@@ -166,8 +190,14 @@
         margin: .5rem;
         height: 500px;
 
-        @media (max-width: 500px) {
+        @media (max-width: 1400px) {
+            width: 45%;
+            margin: 1rem;
+        }
+
+        @media (max-width: 900px) {
             width: 100%;
+            margin: 1rem;
         }
 
         .btn {

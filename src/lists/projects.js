@@ -39,8 +39,8 @@ export default [
       tech: [
           <Image filename="react.png"/>, 
           <Image filename="css.png"/>,
+          <Tailwind />,
           <Image filename="js.png"/>,
-          <Tailwind />
         ],
     },
     {

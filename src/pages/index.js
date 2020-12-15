@@ -16,8 +16,10 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <IntroArea />
-    <AboutMe />
-    <Work />
+    <div id="info">
+      <AboutMe />
+      <Work />
+    </div>
   </Layout>
 )
 
@@ -77,7 +79,9 @@ const IntroArea = () => {
 const AboutMe = () => {
   return (
     <main id="about">
-      <h1><Emoji icon='⚡️'/> Hello! My name is <span>Sebastián Leal</span><Emoji icon='⚡️'/></h1>
+      <div className="title">
+      <h1><Emoji icon='⚡️'/></h1><h1> Hello! My name is <span>Sebastián Leal</span></h1><h1><Emoji icon='⚡️'/></h1>
+      </div>
       <article className="about-me">
         <p>
           I'm a web developer from Venezuela. <br></br>

@@ -1,8 +1,6 @@
 import React from 'react'
 import Image from '../components/image'
 
-import Tailwind from '../images/svg/tailwind.svg'
-
 import { AiFillGithub } from 'react-icons/ai'
 import { SiTailwindcss } from 'react-icons/si'
 
@@ -64,6 +62,6 @@ export const softSkills = [
     'Creative 🎨',
     'Resourceful 📚',
     'Responsible 📆',
-    'Fluent Spanish 🇪🇸',
+    'Native Spanish 🇪🇸',
     'Fluent English 🇺🇸',
 ];
