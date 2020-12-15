@@ -2,10 +2,20 @@ import React from 'react'
 import Button from '../Buttons'
 import './Card.scss'
 
-export default function Card({title, children}) {
+export default function Card({title, children, stack}) {
+
+    const handleStack = () => {
+        let icon = '📟';
+        if (stack === 'fullstack') icon = '⚡️';
+        if (stack === 'frontend') icon = '🔥';
+        return `${icon}${stack.toUpperCase()}${icon}`
+    }
+
     return (
         <section className="card">
             <header className="head">
+                {stack && <p>{handleStack()}</p>}
+
                 <h1>{title}</h1>
             </header>
             {children}
@@ -51,9 +61,10 @@ function ItemCard({name, image}) {
     )
 }
 
-export const ProjectCard = ({title, description, tech, repo, demo}) => {
+export const ProjectCard = ({title, description, stack, tech, repo, demo}) => {
+
     return (
-        <Card title={title}>
+        <Card title={title} stack={stack}>
             <div className="project-card">
                 <article>
                     <p>{description}</p>
@@ -67,16 +78,21 @@ export const ProjectCard = ({title, description, tech, repo, demo}) => {
                     )}
                 </div>
                 <nav>
+                    {demo && 
                     <Button>
                         <a href={demo} target="_blank" rel="noreferrer">
                             View live  
                         </a>
                     </Button>
+                    }
+
+                    {repo &&
                     <Button>
                         <a href={repo} target="_blank" rel="noreferrer">
                             View repo  
                         </a>
                     </Button>
+                    }
                 </nav>
             </div>
         </Card>

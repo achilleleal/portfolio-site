@@ -21,7 +21,16 @@
         font-size: 1.25em;
         color: var(--txt-dark);
         padding: 1.5rem;
-        background: linear-gradient(to right, var(--terciary-light), var(--secondary-light),var(--secondary-light), var(--terciary-light));
+        background: var(--primary);
+
+        .dark & {
+            color: var(--txt-light);
+        }
+        
+        p {
+            letter-spacing: 10px;
+            margin-bottom: .5rem;
+        }        
     }
 
     .content-grid {
@@ -72,6 +81,7 @@
         margin: 0 auto;
         width: auto;
         transition: all 250ms;
+        min-height: 70%;
     }
 
     &:hover {
@@ -113,7 +123,7 @@
         justify-content: space-evenly;
         border-top: solid 1px var(--primary);
         width: 80%;
-        margin: .5rem auto 0;
+        margin: .5rem auto 1rem;
         a {
             color: inherit;
             text-decoration: none !important;
@@ -130,6 +140,6 @@
 
     .tech-container {
         width: 80px;
-        margin: 5px;
+        margin: 0 5px;
     }
 }

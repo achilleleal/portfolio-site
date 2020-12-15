@@ -1,7 +1,10 @@
 import React from 'react'
 import Image from '../components/image'
 
+import Tailwind from '../images/svg/tailwind.svg'
+
 import { AiFillGithub } from 'react-icons/ai'
+import { SiTailwindcss } from 'react-icons/si'
 
 export const techSkills = [
     {
@@ -15,6 +18,10 @@ export const techSkills = [
     {
         name: 'Sass',
         image: <Image filename="sass.png"/>,
+    },
+    {
+        name: 'TailwindCSS',
+        image: <SiTailwindcss fill="#06b6d4"/>,
     },
     {
         name: 'JS + Node',

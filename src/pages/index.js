@@ -109,6 +109,7 @@ const Work = () => {
             key={project.name}
             title={project.name} 
             description={project.description} 
+            stack={project.stack}
             repo={project.repo}
             demo={project.demo}
             tech={project.tech}
