@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from './image'
+import Image from '../components/image'
 
 import { AiFillGithub } from 'react-icons/ai'
 
@@ -35,6 +35,10 @@ export const techSkills = [
     {
         name: 'PostgreSQL',
         image: <Image filename="postgresql.png"/>,
+    },
+    {
+        name: 'Heroku',
+        image: <Image filename="heroku.png"/>,
     },
     {
         name: 'Firebase',

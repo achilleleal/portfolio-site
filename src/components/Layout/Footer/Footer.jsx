@@ -9,7 +9,7 @@ export default function Footer() {
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
     return (
-        <footer>
+        <footer id="footer">
             <div className="footer-container">
                 <nav>
                     {socialMedia.map(media => 

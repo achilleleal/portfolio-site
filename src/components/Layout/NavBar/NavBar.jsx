@@ -21,7 +21,7 @@ export default function NavBar() {
     }, [])
 
     return (
-    <header className={scrolled ? 'scrolled' : ''}>
+    <header id="navigation" className={scrolled ? 'scrolled' : ''}>
         <nav className="navbar">
             <NavLink to="/"><span>~/</span> SEBASTIÁN_LEAL</NavLink>
             <NavLink to="#about"><span>./</span>about</NavLink>

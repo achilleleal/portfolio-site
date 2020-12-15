@@ -4,5 +4,5 @@
  * See: https://www.gatsbyjs.com/docs/browser-apis/
  */
 
-import "./src/theme.scss"
-import "./src/global.scss"
+import "./src/styles/theme.scss"
+import "./src/styles/global.scss"

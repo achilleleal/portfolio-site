@@ -18,11 +18,10 @@ const Layout = ({ children }) => {
 return (
     <div className="page">
         <NavBar />
-        <main>
+        <main id="main">
           {children}
         </main>
         <Footer />
-
         <div className="theme-btn-area">
           <ThemeBtn />
         </div> 

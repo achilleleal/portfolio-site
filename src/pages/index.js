@@ -2,12 +2,13 @@ import React from "react"
 
 import Particles from 'react-particles-js'
 
-import { techSkills, softSkills } from '../components/skills'
+import { techSkills, softSkills } from '../lists/skills'
+import projects from '../lists/projects'
 
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import Rocket from '../images/svg/rocket.svg'
-import Card from '../components/Card'
+import { SkillCard, ProjectCard } from '../components/Card'
 import Emoji from '../components/Emoji'
 import './index.scss'
 
@@ -16,6 +17,7 @@ const IndexPage = () => (
     <SEO title="Home" />
     <IntroArea />
     <AboutMe />
+    <Work />
   </Layout>
 )
 
@@ -87,12 +89,34 @@ const AboutMe = () => {
         <h2>I'm always looking for a good challenge to drive my skills to their limits</h2>
       </article>
       <div className="skills">
-        <Card title='Soft skills' content={softSkills} display='list'/>
-        <Card title='Tech skills' content={techSkills} display='grid'/>
+        <SkillCard title='Soft skills' content={softSkills} display='list'/>
+        <SkillCard title='Tech skills' content={techSkills} display='grid'/>
       </div>
     </main>
     
   )
+}
+
+
+
+const Work = () => {
+  return (
+    <section id="works">
+      <h1>Some of my work...</h1>
+      <main id="projects">
+        {projects.map(project => 
+          <ProjectCard 
+            key={project.name}
+            title={project.name} 
+            description={project.description} 
+            repo={project.repo}
+            demo={project.demo}
+            tech={project.tech}
+          />
+        )}
+      </main>
+    </section>
+  );
 }
 
 export default IndexPage

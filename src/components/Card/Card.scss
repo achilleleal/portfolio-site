@@ -18,10 +18,10 @@
     }
 
     .head {
+        font-size: 1.25em;
         color: var(--txt-dark);
         padding: 1.5rem;
-        background-color: var(--secondary);
-        margin-bottom: 1rem;
+        background: linear-gradient(to right, var(--terciary-light), var(--secondary-light),var(--secondary-light), var(--terciary-light));
     }
 
     .content-grid {
@@ -31,7 +31,11 @@
     }
 
     .content-list {
-        padding: 0 1rem 1rem 1rem;
+        width: 100%;
+        height: 80%;
+        padding: 0 1rem;
+        display: flex;
+        align-items: center;
     }
 
     ul {
@@ -67,7 +71,6 @@
     div {
         margin: 0 auto;
         width: auto;
-        height: 100px;
         transition: all 250ms;
     }
 
@@ -84,5 +87,49 @@
 
     p {
         margin-top: .5rem;
+    }
+}
+
+.project-card {
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    justify-content: space-between;
+
+    p {
+        padding: 0 1rem;
+    }
+    
+    article {
+        padding: .5rem;
+        flex-basis: 25%;
+    }
+
+    nav {
+        padding: 1rem;
+        justify-self: flex-end;
+        display: flex;
+        justify-content: space-evenly;
+        border-top: solid 1px var(--primary);
+        width: 80%;
+        margin: .5rem auto 0;
+        a {
+            color: inherit;
+            text-decoration: none !important;
+        }
+    }
+    
+    .project-tech {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 50%;
+    }
+
+    .tech-container {
+        width: 80px;
+        margin: 5px;
     }
 }
