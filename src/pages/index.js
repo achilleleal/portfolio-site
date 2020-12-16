@@ -16,10 +16,8 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <IntroArea />
-    <div id="info">
-      <AboutMe />
-      <Work />
-    </div>
+    <AboutMe />
+    <Work />
   </Layout>
 )
 
@@ -51,7 +49,9 @@ const IntroArea = () => {
 
   return (
     <div className="intro-area">
-      <Particles params={particleParams} className="bg-particles"/>
+      <div className="particles-bg">
+        <Particles params={particleParams} className="particles"/>
+      </div>
       <div className="intro">
         <div>
           <h1>The web developer <span>you need.</span> <Emoji icon='⭐️'/></h1>

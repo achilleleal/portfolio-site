@@ -16,6 +16,7 @@ export default function Footer() {
                         <MediaLink 
                           to={media.to}
                           icon={<media.icon/>}
+                          key={`${media.icon}`}
                         />
                     )}
                 </nav>

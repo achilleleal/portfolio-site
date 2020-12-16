@@ -40,8 +40,8 @@ export const SkillCard = ({title, content, display}) => {
                 :
                     <div className="content-list">
                         <ul>
-                            {content.map(item =>
-                                <li><span>{item}</span></li>
+                            {content.map((item, i) =>
+                                <li key={i}><span>{item}</span></li>
                             )}
                         </ul>
                     </div>
@@ -71,8 +71,8 @@ export const ProjectCard = ({title, description, stack, tech, repo, demo}) => {
                 </article>
                 <h3 style={{textAlign: 'center'}}>Made with:</h3>
                 <div className="project-tech">
-                    {tech.map(item =>
-                        <div className='tech-container' key={item.filename}>
+                    {tech.map((item, i) =>
+                        <div className='tech-container' key={i}>
                             {item}
                         </div>
                     )}
