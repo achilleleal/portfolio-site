@@ -105,6 +105,7 @@ $particles-height: 130vh;
 .particles {
     position: absolute;
     z-index: 1;
+    width: 100vw;
     height: $particles-height;
 }
 
@@ -140,6 +141,7 @@ $particles-height: 130vh;
     margin: 2rem auto;
     p {
         max-width: calc(var(--max-width) / 2);
+        background-color: var(--bg);
         margin: 4rem auto;
         font-size: 1.5em;
         line-height: 1.25em;
@@ -196,8 +198,9 @@ $particles-height: 130vh;
         }
 
         @media (max-width: 900px) {
-            width: 100%;
-            margin: 1rem;
+            display: block;
+            width: 90%;
+            height: 550px;
         }
 
         .btn {

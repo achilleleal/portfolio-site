@@ -10,7 +10,7 @@
 }
 
 body {
-    background-image:  radial-gradient(gray 2px, transparent 2px), radial-gradient(var(--secondary) 2px, transparent 2px);
+    background-image:  radial-gradient(rgb(228, 225, 225) 2px, transparent 2px), radial-gradient(var(--primary-dark) 2px, transparent 2px);
     background-size: 80px 80px;
     background-position: 0 0,40px 40px;
 

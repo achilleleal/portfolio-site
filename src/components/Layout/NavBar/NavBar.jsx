@@ -24,7 +24,7 @@ export default function NavBar() {
     <header id="navigation" className={scrolled ? 'scrolled' : ''}>
         <nav className="navbar">
             <NavLink to="/"><span>~/</span> SEBASTIÁN_LEAL</NavLink>
-            <NavLink to="#info"><span>./</span>about</NavLink>
+            <NavLink to="#about"><span>./</span>about</NavLink>
             <NavLink to="#works"><span>./</span>works</NavLink>
             {/* <NavLink to="/contact"><span>./</span>contact</NavLink> */}
         </nav>
@@ -38,5 +38,5 @@ const NavLink = ({ to, children }) =>
         <h1>
             {children}
         </h1>
-        <hr/>
+        {/* <hr/> */}
     </Link>

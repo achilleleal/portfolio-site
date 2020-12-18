@@ -34,8 +34,8 @@ export default [
       name: "Weather App",
       stack: 'fullstack',
       description: `Using OpenWeatherMap's API. Shows current weather and forecasts the next 5 days.`,
-      repo: 'https://github.com/achilleleal/advent-of-code-2020',
-      demo: 'achilleleal.github.io/weather-app/',
+      repo: 'https://github.com/achilleleal/weather-app/',
+      demo: 'https://achilleleal.github.io/weather-app/',
       tech: [
           <Image filename="react.png"/>, 
           <Image filename="css.png"/>,
@@ -44,9 +44,9 @@ export default [
         ],
     },
     {
-      name: "Conway's Game of Life",
+      name: "The Game of Life",
       stack: 'frontend',
-      description: "The classic cellular automaton game, for the browser. It's pure JS DOM manipulation! This was really fun to build.",
+      description: "The classic cellular automaton game by John Conway, for the browser. It's pure JS DOM manipulation! This was really fun to build.",
       repo: 'https://github.com/achilleleal/Game-Of-Life-HTML',
       demo: 'https://achilleleal.github.io/Game-Of-Life-HTML/',
       tech: [
