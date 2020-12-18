@@ -11,7 +11,8 @@ export default function Footer() {
     return (
         <footer id="footer">
             <div className="footer-container">
-                <nav>
+                <h3>Let's get in touch!</h3>
+                <nav id="contacts">
                     {socialMedia.map(media => 
                         <MediaLink 
                           to={media.to}
@@ -20,6 +21,7 @@ export default function Footer() {
                         />
                     )}
                 </nav>
+                <hr></hr>
                 <h4>© Sebastián Leal.</h4>
                 <p>{months[date.getMonth()]}, {date.getFullYear()}.</p>
             </div>

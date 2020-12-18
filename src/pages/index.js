@@ -1,6 +1,7 @@
 import React from "react"
 
 import Particles from 'react-particles-js'
+import Fade from 'react-reveal/Fade';
 
 import { techSkills, softSkills } from '../lists/skills'
 import projects from '../lists/projects'
@@ -52,6 +53,7 @@ const IntroArea = () => {
       <div className="particles-bg">
         <Particles params={particleParams} className="particles"/>
       </div>
+      <Fade left>
       <div className="intro">
         <div>
           <h1>The web developer <span>you need.</span> <Emoji icon='⭐️'/></h1>
@@ -70,6 +72,7 @@ const IntroArea = () => {
             <Rocket />
         </div>
       </div>
+      </Fade>
     </div>
   )
 }
@@ -79,23 +82,29 @@ const IntroArea = () => {
 const AboutMe = () => {
   return (
     <main id="about">
-      <div className="title">
-      <h1><Emoji icon='⚡️'/></h1><h1> Hello! My name is <span>Sebastián Leal</span></h1><h1><Emoji icon='⚡️'/></h1>
-      </div>
+      <Fade bottom>
+        <div className="title">
+          <h1><Emoji icon='⚡️'/></h1><h1> Hello! My name is <span>Sebastián Leal</span></h1><h1><Emoji icon='⚡️'/></h1>
+        </div>
+      </Fade>
       <article className="about-me">
-        <p>
-          I'm a web developer from Venezuela. <br></br>
-          I focus <span>primarily on the frontend</span>, but I also know <span>some backend</span> things.<br></br> 
-          I graduated from highschool a few months ago, and I plan on studying computer science.<br></br>
-          I've been developing for a while now, and love building interesting projects.<br></br>
-          Also, I'm a <span>huge space geek</span> (is it too obvious?).<br></br>
-        </p>
-        <h2>I'm always looking for a good challenge to drive my skills to their limits</h2>
+        <Fade bottom>
+          <p>
+            I'm a web developer from Venezuela. <br></br>
+            I focus <span>primarily on the frontend</span>, but I also know <span>some backend</span> things.<br></br> 
+            I graduated from highschool a few months ago, and I plan on studying computer science.<br></br>
+            I've been developing for a while now, and love building interesting projects.<br></br>
+            Also, I'm a <span>huge space geek</span> (is it too obvious?).<br></br>
+          </p>
+          <h2>I'm always looking for a good challenge to drive my skills to their limits</h2>
+        </Fade>
       </article>
-      <div className="skills">
-        <SkillCard title='Soft skills' content={softSkills} display='list'/>
-        <SkillCard title='Tech skills' content={techSkills} display='grid'/>
-      </div>
+      <Fade clear>
+        <div className="skills">
+          <SkillCard title='Soft skills' content={softSkills} display='list'/>
+          <SkillCard title='Tech skills' content={techSkills} display='grid'/>
+        </div>
+      </Fade>
     </main>
     
   )
@@ -106,20 +115,24 @@ const AboutMe = () => {
 const Work = () => {
   return (
     <section id="works">
-      <h1>Some of my work...</h1>
-      <main id="projects">
-        {projects.map(project => 
-          <ProjectCard 
-            key={project.name}
-            title={project.name} 
-            description={project.description} 
-            stack={project.stack}
-            repo={project.repo}
-            demo={project.demo}
-            tech={project.tech}
-          />
-        )}
-      </main>
+      <Fade bottom>
+        <h1>Some of my work...</h1>
+      </Fade>
+      <Fade clear>
+        <main id="projects">
+          {projects.map(project => 
+            <ProjectCard 
+              key={project.name}
+              title={project.name} 
+              description={project.description} 
+              stack={project.stack}
+              repo={project.repo}
+              demo={project.demo}
+              tech={project.tech}
+            />
+          )}
+        </main>
+      </Fade>
     </section>
   );
 }

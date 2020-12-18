@@ -1,6 +1,6 @@
 #footer {
 
-    padding: 1.5rem;
+    padding: 3rem;
     background-color: var(--primary-light);
     color: white;
 
@@ -28,5 +28,18 @@
         h4 {
             margin: .5rem;
         }
+    }
+
+    #contacts {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    hr {
+        margin: 2rem auto;
+        width: 20%;
+        border: solid 1px white;
     }
 }

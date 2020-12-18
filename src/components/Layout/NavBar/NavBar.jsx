@@ -26,7 +26,7 @@ export default function NavBar() {
             <NavLink to="/"><span>~/</span> SEBASTIÁN_LEAL</NavLink>
             <NavLink to="#about"><span>./</span>about</NavLink>
             <NavLink to="#works"><span>./</span>works</NavLink>
-            {/* <NavLink to="/contact"><span>./</span>contact</NavLink> */}
+            <NavLink to="#contacts"><span>./</span>contact</NavLink>
         </nav>
     </header>
     )
