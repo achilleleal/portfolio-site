@@ -20,10 +20,15 @@ export default function NavBar() {
         window.addEventListener('scroll', handleScroll)
     }, [])
 
+    
+    const toTop = () => {
+        window.scrollTo(0,0)
+    }
+
     return (
     <header id="navigation" className={scrolled ? 'scrolled' : ''}>
         <nav className="navbar">
-            <NavLink to="/"><span>~/</span> SEBASTIÁN_LEAL</NavLink>
+            <NavLink to="/" onClick={toTop}><span>~/</span> SEBASTIÁN_LEAL</NavLink>
             <NavLink to="#about"><span>./</span>about</NavLink>
             <NavLink to="#works"><span>./</span>works</NavLink>
             <NavLink to="#contacts"><span>./</span>contact</NavLink>
@@ -33,8 +38,8 @@ export default function NavBar() {
 }
 
 
-const NavLink = ({ to, children }) => 
-    <Link to={to}>
+const NavLink = ({ to, children, onClick }) => 
+    <Link to={to} onClick={onClick}>
         <h1>
             {children}
         </h1>
